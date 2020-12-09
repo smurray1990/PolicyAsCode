@@ -1,0 +1,64 @@
+name: manage-azure-policy-5e0e9f64
+on:
+  workflow_dispatch:
+    inputs:
+      remarks:
+        description: 'Reason for triggering the workflow run'
+        required: false
+        default: 'Updating Azure Policies'
+
+
+## Uncomment the following if you wish to automatically trigger workflow run with every commit
+#
+#  push:
+#    paths:
+#      - 'policies/Require_a_tag_and_its_value_on_resources_1e30110a-5ceb-460c-a204-c1c3969c6d62/**'
+#      - 'policies/Append_a_tag_and_its_value_to_resources_2a0e14a6-b0a6-4fab-991a-187a4f81c498/**'
+#      - 'policies/Inherit_a_tag_from_the_subscription_if_missing_40df99da-1232-49b1-a39a-6da8d878f469/**'
+#      - 'policies/Append_a_tag_and_its_value_to_resource_groups_49c88fc8-6fd1-46fd-a676-f12d1d3a4c71/**'
+#      - 'policies/Add_a_tag_to_resources_4f9dc7db-30c1-420c-b61a-e1d640128d26/**'
+#      - 'policies/Add_or_replace_a_tag_on_resources_5ffd78d9-436d-4b41-a421-5baa819e3008/**'
+#      - 'policies/Add_or_replace_a_tag_on_subscriptions_61a4d60b-7326-440e-8051-9f94394d4dd1/**'
+#      - 'policies/Add_a_tag_to_resource_groups_726aca4c-86e9-4b04-b0c5-073027359532/**'
+#      - 'policies/Require_a_tag_on_resources_871b6d14-10aa-478d-b590-94f262ecfa99/**'
+#      - 'policies/Require_a_tag_and_its_value_on_resource_groups_8ce3da23-7156-49e4-b145-24f95f9dcb46/**'
+#      - 'policies/Require_a_tag_on_resource_groups_96670d01-0a4d-4649-9c89-2d3abc0a5025/**'
+#      - 'policies/Add_a_tag_to_subscriptions_96d9a89c-0d67-41fc-899d-2b9599f76a24/**'
+#      - 'policies/Append_a_tag_and_its_value_from_the_resource_group_9ea02ca2-71db-412d-8b00-7c7ca9fcd32d/**'
+#      - 'policies/Inherit_a_tag_from_the_subscription_b27a0cbd-a167-4dfa-ae64-4337be671140/**'
+#      - 'policies/Inherit_a_tag_from_the_resource_group_cd3aa116-8754-49c9-a813-ad46512ece54/**'
+#      - 'policies/Add_or_replace_a_tag_on_resource_groups_d157c373-a6c4-483d-aaad-570756956268/**'
+#      - 'policies/Inherit_a_tag_from_the_resource_group_if_missing_ea3f2387-9b95-492a-a190-fcdc54f7b070/**'
+#      - .github/workflows/manage-azure-policy-5e0e9f64.yml
+jobs:
+  apply-azure-policy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS_5e0e9f64}}
+        allow-no-subscriptions: true
+    - name: Create or Update Azure Policies
+      uses: azure/manage-azure-policy@v0
+      with:
+        paths: |
+          policies/Require_a_tag_and_its_value_on_resources_1e30110a-5ceb-460c-a204-c1c3969c6d62/**
+          policies/Append_a_tag_and_its_value_to_resources_2a0e14a6-b0a6-4fab-991a-187a4f81c498/**
+          policies/Inherit_a_tag_from_the_subscription_if_missing_40df99da-1232-49b1-a39a-6da8d878f469/**
+          policies/Append_a_tag_and_its_value_to_resource_groups_49c88fc8-6fd1-46fd-a676-f12d1d3a4c71/**
+          policies/Add_a_tag_to_resources_4f9dc7db-30c1-420c-b61a-e1d640128d26/**
+          policies/Add_or_replace_a_tag_on_resources_5ffd78d9-436d-4b41-a421-5baa819e3008/**
+          policies/Add_or_replace_a_tag_on_subscriptions_61a4d60b-7326-440e-8051-9f94394d4dd1/**
+          policies/Add_a_tag_to_resource_groups_726aca4c-86e9-4b04-b0c5-073027359532/**
+          policies/Require_a_tag_on_resources_871b6d14-10aa-478d-b590-94f262ecfa99/**
+          policies/Require_a_tag_and_its_value_on_resource_groups_8ce3da23-7156-49e4-b145-24f95f9dcb46/**
+          policies/Require_a_tag_on_resource_groups_96670d01-0a4d-4649-9c89-2d3abc0a5025/**
+          policies/Add_a_tag_to_subscriptions_96d9a89c-0d67-41fc-899d-2b9599f76a24/**
+          policies/Append_a_tag_and_its_value_from_the_resource_group_9ea02ca2-71db-412d-8b00-7c7ca9fcd32d/**
+          policies/Inherit_a_tag_from_the_subscription_b27a0cbd-a167-4dfa-ae64-4337be671140/**
+          policies/Inherit_a_tag_from_the_resource_group_cd3aa116-8754-49c9-a813-ad46512ece54/**
+          policies/Add_or_replace_a_tag_on_resource_groups_d157c373-a6c4-483d-aaad-570756956268/**
+          policies/Inherit_a_tag_from_the_resource_group_if_missing_ea3f2387-9b95-492a-a190-fcdc54f7b070/**
