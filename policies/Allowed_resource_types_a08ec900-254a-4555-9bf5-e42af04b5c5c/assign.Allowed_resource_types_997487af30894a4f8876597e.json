@@ -12,7 +12,6 @@
    "listOfResourceTypesAllowed": {
     "value": [
      "microsoft.web/sites",
-     "microsoft.web/serverfarms",
      "microsoft.insights/components"
     ]
    }
