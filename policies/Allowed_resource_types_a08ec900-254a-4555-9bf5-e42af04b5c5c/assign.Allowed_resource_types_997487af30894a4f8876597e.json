@@ -11,10 +11,12 @@
   "parameters": {
    "listOfResourceTypesAllowed": {
     "value": [
-     "microsoft.web/sites"
+     "microsoft.web/sites",
+     "microsoft.web/serverfarms"
     ]
    }
   },
+  "description": "",
   "metadata": {
    "assignedBy": "Scott Murray",
    "parameterScopes": {
@@ -22,8 +24,8 @@
    },
    "createdBy": "68344de7-0788-49bf-8d56-5a5eb1b6bf86",
    "createdOn": "2020-12-16T10:38:05.8919688Z",
-   "updatedBy": null,
-   "updatedOn": null
+   "updatedBy": "68344de7-0788-49bf-8d56-5a5eb1b6bf86",
+   "updatedOn": "2020-12-16T10:50:31.3881405Z"
   },
   "enforcementMode": "Default"
  },
