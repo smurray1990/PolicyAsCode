@@ -11,7 +11,7 @@
   "parameters": {
    "listOfResourceTypesAllowed": {
     "value": [
-     "microsoft.web/sites/premieraddons"
+     "microsoft.web"
     ]
    }
   },
