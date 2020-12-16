@@ -12,7 +12,8 @@
    "listOfResourceTypesAllowed": {
     "value": [
      "microsoft.web/sites",
-     "microsoft.web/serverfarms"
+     "microsoft.web/serverfarms",
+     "microsoft.insights/components"
     ]
    }
   },
@@ -25,7 +26,7 @@
    "createdBy": "68344de7-0788-49bf-8d56-5a5eb1b6bf86",
    "createdOn": "2020-12-16T10:38:05.8919688Z",
    "updatedBy": "68344de7-0788-49bf-8d56-5a5eb1b6bf86",
-   "updatedOn": "2020-12-16T10:50:31.3881405Z"
+   "updatedOn": "2020-12-16T11:20:50.463261Z"
   },
   "enforcementMode": "Default"
  },
