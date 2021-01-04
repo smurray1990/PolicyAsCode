@@ -1,0 +1,36 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "properties": {
+  "displayName": "LAB - Allowed resource types",
+  "policyDefinitionId": "/subscriptions/65571b19-a389-4ff7-9121-15704bbcc10d/providers/Microsoft.Authorization/policyDefinitions/5ca1125c-46cf-4db9-b9d4-3ae99b262bef",
+  "scope": "/subscriptions/65571b19-a389-4ff7-9121-15704bbcc10d/resourceGroups/rg-policy-lab-1",
+  "notScopes": [],
+  "parameters": {
+   "listOfResourceTypesAllowed": {
+    "value": [
+     "microsoft.web/serverfarms",
+     "microsoft.web/sites",
+     "microsoft.insights/components"
+    ]
+   }
+  },
+  "description": "",
+  "metadata": {
+   "assignedBy": "Scott Murray",
+   "parameterScopes": {
+    "listOfResourceTypesAllowed": "/subscriptions/65571b19-a389-4ff7-9121-15704bbcc10d/resourceGroups/rg-policy-lab-1"
+   },
+   "createdBy": "68344de7-0788-49bf-8d56-5a5eb1b6bf86",
+   "createdOn": "2021-01-04T14:07:04.5294087Z",
+   "updatedBy": "68344de7-0788-49bf-8d56-5a5eb1b6bf86",
+   "updatedOn": "2021-01-04T14:07:53.1486683Z"
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/subscriptions/65571b19-a389-4ff7-9121-15704bbcc10d/resourceGroups/rg-policy-lab-1/providers/Microsoft.Authorization/policyAssignments/8b997e90a2bf436dafc4fa57",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "8b997e90a2bf436dafc4fa57"
+}
