@@ -1,0 +1,39 @@
+{
+ "properties": {
+  "displayName": "LAB - Allowed resource types",
+  "policyType": "Custom",
+  "mode": "Indexed",
+  "description": "This policy enables you to specify the resource types that your organization can deploy. Only resource types that support 'tags' and 'location' will be affected by this policy. To restrict all resources please duplicate this policy and change the 'mode' to 'All'.",
+  "metadata": {
+   "category": "General",
+   "createdBy": "68344de7-0788-49bf-8d56-5a5eb1b6bf86",
+   "createdOn": "2021-01-04T13:52:12.9155951Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {
+   "listOfResourceTypesAllowed": {
+    "type": "Array",
+    "metadata": {
+     "displayName": "Allowed resource types",
+     "description": "The list of resource types that can be deployed.",
+     "strongType": "resourceTypes"
+    }
+   }
+  },
+  "policyRule": {
+   "if": {
+    "not": {
+     "field": "type",
+     "in": "[parameters('listOfResourceTypesAllowed')]"
+    }
+   },
+   "then": {
+    "effect": "deny"
+   }
+  }
+ },
+ "id": "/subscriptions/65571b19-a389-4ff7-9121-15704bbcc10d/providers/Microsoft.Authorization/policyDefinitions/5ca1125c-46cf-4db9-b9d4-3ae99b262bef",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "5ca1125c-46cf-4db9-b9d4-3ae99b262bef"
+}
